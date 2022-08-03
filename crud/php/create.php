@@ -18,7 +18,7 @@ include "config.php";
 
     $result = $link->query($sql);
 
-    if ($result == TRUE) {
+    if ($result == true) {
 
      header('location:read.php');
 
@@ -26,9 +26,9 @@ include "config.php";
       
      // echo "<a href='read.php'> View page </a>";
 
-    }else{
+    } else {
 
-      echo "Error:". $sql . "<br>". $conn->error;
+       echo "Error:". $sql . "<br>". $link->error;
 
     } 
 
