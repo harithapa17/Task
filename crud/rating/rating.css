@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+        position: absolute;
+        transform: rotateY(180deg);
+        display: flex;
+}
+.wrapper input {
+	display: none;
+}
+.wrapper label {
+	display: block;
+	cursor: pointer;
+	width: 30px;
+}
+.wrapper label:before {
+	content: '★';
+	position:'relative';
+	display: block;
+	font-size: 40px;
+	color: #ece3e3;
+}
+.wrapper label:after {
+	content: '★';
+	position: absolute;
+	display: block;
+	font-size: 40px;
+	color: rgb(232, 247, 30);
+	top: 0;
+	opacity: 0;
+	transition: .4s;
+}
+.wrapper label:hover:after, .wrapper label:hover~label:after, .wrapper input:checked~label:after {
+	opacity: 1;
+}
